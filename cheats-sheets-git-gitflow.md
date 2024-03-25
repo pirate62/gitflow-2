@@ -1,83 +1,118 @@
-### Commandes Git
+# <span style="color: blue;"> Commandes Git
 
-## Pour débuter un projet avec Git
+### - Cloner un depôt
 
-# Initialiser un depot
+- git clone <url_depot>
 
-git init
+### - Récupérer la dernière version
 
-# initialiser un depot avec la branche main
+- git pull
 
-git init --initial-branch=main
-git init -b main
+### - Initialiser un depot
 
-# ajouter des fichiers a l'index
+- git init 
 
-git add <nom_fichier>
+### - Initialiser un depot avec la branche main
 
-# ajouter tous les fichiers à l'index
+- git init --initial-branch=main
+- git init -b main
 
-git add .
+### - Ajouter des fichiers a l'index
 
-# Voir les modiifcations
+- git add <nom_fichier>
 
-git status
+### - Ajouter tous les fichiers à l'index
 
-# valider les modifications
+- git add .
 
-git commit -m "<message>"
+### - Voir les modiifcations
 
-# creer une branche
+- git status
 
-git branch <nom_branche>
+### - Valider les modifications
 
-# basculer vers une branche
+- git commit -m "<message>"
 
-git checkout <nom_branche>
+### - Valider et pousser
 
-# fusionner une branche avec la branche courante
+- git push
 
-git merge <nom_branche>
+### - Voir les commits
 
-# supprimer une branche
+- git log
 
-# Afficher la liste des branches :
-git branch
+### - Creer une branche
 
-# Supprimer une branche :
-git branch -d <nom_branche>
+- git branch <nom_branche>
+
+### - Basculer vers une branche
+
+- git checkout <nom_branche>
+
+### - Fusionner une branche avec la branche courante
+
+- git merge <nom_branche>
+
+### - Supprimer une branch
+
+- git branch -d <nom_branche>
+
+### Voici quelques exemples d’utilisation de git fetch :
+
+Pour télécharger les mises à jour de la branche distante develop depuis le dépôt distant origin :
+
+- git fetch origin develop
+
+Pour télécharger les mises à jour de toutes les branches distantes configurées dans votre projet :
+
+- git fetch --all
+
+Pour ajouter les noms de références et les identifiants d’objets des références téléchargées au contenu existant de .git/FETCH_HEAD :
+
+- git fetch --append
+
+N’oubliez pas que git fetch ne fusionne pas automatiquement les modifications dans votre branche locale. Pour intégrer les mises à jour téléchargées, vous devrez utiliser git merge ou git pull
+
+### - Supprimer une branche 
+
+- git branch -d <nom_branche>
 
 
-### commandes Git flow
+# <span style="color: blue;"> Commandes Git flow
 
-## Pour débuter un projet avec Git Flow :
+Initialisation : Pour initialiser Git Flow dans un dépôt existant, vous pouvez exécuter la commande suivante :
 
-# Initialiser un dépôt
-git init
+- git flow init
 
-# Créer une branche de développement
-git flow init -d
+Créer une nouvelle fonctionnalité (feature) :
+Pour commencer une nouvelle fonctionnalité, utilisez :
 
-# Ajouter des fichiers à l'index
-git add <nom_fichier>
+- git flow feature start nom_de_la_fonctionnalité
 
-# Valider les modifications
-git commit -m "<message>"
+Faites vos modifications sur la branche de fonctionnalité.
+Terminer une fonctionnalité :
+Une fois la fonctionnalité terminée, fusionnez-la dans la branche develop :
 
-# Créer une nouvelle fonctionnalité
-git flow feature start <nom_fonctionnalité>
+- git flow feature finish nom_de_la_fonctionnalité
 
-# Terminer une fonctionnalité et la fusionner dans la branche de développement
-git flow feature finish <nom_fonctionnalité>
+Créer une nouvelle version (release) :
+Pour commencer une nouvelle version, utilisez :
 
-# Préparer une version Release
-git flow release start <numéro_version>
+- git flow release start 1.0.0
 
-# Terminer une version Release et la fusionner dans la branche de développement et la branche principale
-git flow release finish <numéro_version>
+Effectuez les ajustements nécessaires (par exemple, mise à jour du numéro de version, correction de bugs).
+Terminez la version avec :
 
-# Gérer les bugs dans la branche principale
-git flow hotfix start <numéro_version>
+- git flow release finish 1.0.0
 
-# Terminer la gestion d'un bug et la fusionner dans la branche de développement et la branche principale
-git flow hotfix finish <numéro_version>
+Corriger un correctif (hotfix) :
+Pour commencer un correctif, utilisez :
+
+- git flow hotfix start nom_du_correctif
+
+Effectuez les modifications nécessaires.
+Terminez le correctif avec :
+
+- git flow hotfix finish nom_du_correctif
+
+
