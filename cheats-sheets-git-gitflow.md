@@ -31,7 +31,7 @@
 
 ### - Valider les modifications
 
-- git commit -m "<message>"
+- git commit -m <"message">
 
 ### - Valider et pousser
 
