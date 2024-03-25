@@ -1,4 +1,4 @@
-# <span style="color: blue;"> Commandes Git <span>
+# <span style="color: blue;"> Commandes Git </span>
 
 ### - Cloner un depôt
 
@@ -78,7 +78,7 @@ N’oubliez pas que git fetch ne fusionne pas automatiquement les modifications 
 - git branch -d <nom_branche>
 
 
-# <span style="color: blue;"> Commandes Git flow <span>
+# <span style="color: blue;"> Commandes Git flow </span>
 
 Initialisation : Pour initialiser Git Flow dans un dépôt existant, vous pouvez exécuter la commande suivante :
 
