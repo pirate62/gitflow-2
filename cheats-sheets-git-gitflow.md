@@ -115,4 +115,6 @@ Terminez le correctif avec :
 
 - git flow hotfix finish nom_du_correctif
 
+### - Comment faire un pull request
 
+https://www.atlassian.com/fr/git/tutorials/making-a-pull-request
